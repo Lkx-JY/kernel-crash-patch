@@ -138,10 +138,10 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 def setup_exception_handlers(app: FastAPI) -> None:
     """注册全局异常处理器"""
 
-    from ...common.exceptions import CoreLinuxCommitError
+    from ...common.exceptions import KernelCrashPatchError
 
-    @app.exception_handler(CoreLinuxCommitError)
-    async def business_exception_handler(request: Request, exc: CoreLinuxCommitError):
+    @app.exception_handler(KernelCrashPatchError)
+    async def business_exception_handler(request: Request, exc: KernelCrashPatchError):
         """业务异常 → 结构化错误响应"""
         logger.error(f"Business error: [{exc.code}] {exc.message}")
         return JSONResponse(

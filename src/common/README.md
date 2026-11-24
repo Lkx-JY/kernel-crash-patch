@@ -38,7 +38,7 @@ src/common/
 **异常层次结构**:
 
 ```
-CoreLinuxCommitError (E000)       # 基础异常
+KernelCrashPatchError (E000)       # 基础异常
 ├── ConfigurationError (E001)     # 配置异常
 │   ├── MissingConfigError        # 缺少配置
 │   └── InvalidConfigError        # 配置无效
@@ -193,7 +193,7 @@ root = get_project_root()
 
 ```python
 from src.common import (
-    CoreLinuxCommitError,
+    KernelCrashPatchError,
     ConfigurationError,
     AnalysisError,
     log_error_with_context,

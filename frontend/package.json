@@ -1,9 +1,9 @@
 {
-  "name": "core-linuxcommit-frontend",
+  "name": "kernel-crash-patch-frontend",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Core.LinuxCommit — Kernel Crash Patch Matching Frontend",
+  "description": "Kernel Crash Auto-Diagnosis & Patch Matching System Frontend",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <h2 class="page-title">系统仪表盘</h2>
-    <p class="text-muted mb-4">Linux内核补丁匹配系统 — 操作系统宕机补丁智能匹配系统</p>
+    <p class="text-muted mb-4">Linux 内核宕机自动诊断与补丁匹配系统 — 操作系统宕机补丁智能匹配系统</p>
 
     <!-- 统计卡片 -->
     <el-row :gutter="16" class="stats-row">

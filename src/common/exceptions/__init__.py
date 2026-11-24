@@ -15,7 +15,7 @@ from typing import Dict, Any, Optional
 # 基类
 # ============================================================================
 
-class CoreLinuxCommitError(Exception):
+class KernelCrashPatchError(Exception):
     """所有项目异常的基类
 
     Attributes:
@@ -51,7 +51,7 @@ class CoreLinuxCommitError(Exception):
 # 配置异常
 # ============================================================================
 
-class ConfigurationError(CoreLinuxCommitError):
+class ConfigurationError(KernelCrashPatchError):
     """配置相关的异常"""
 
     def __init__(self, message: str, key: str = "", context: Optional[Dict[str, Any]] = None):
@@ -85,7 +85,7 @@ class InvalidConfigError(ConfigurationError):
 # 数据异常
 # ============================================================================
 
-class DataError(CoreLinuxCommitError):
+class DataError(KernelCrashPatchError):
     """数据处理相关异常"""
 
     def __init__(
@@ -126,7 +126,7 @@ class InvalidDataFormat(DataError):
 # 分析异常
 # ============================================================================
 
-class AnalysisError(CoreLinuxCommitError):
+class AnalysisError(KernelCrashPatchError):
     """分析过程中的异常"""
 
     def __init__(self, message: str, analysis_stage: str = "", context: Optional[Dict[str, Any]] = None):
@@ -173,7 +173,7 @@ class RootCauseAnalysisError(AnalysisError):
 # 索引/检索异常
 # ============================================================================
 
-class IndexingError(CoreLinuxCommitError):
+class IndexingError(KernelCrashPatchError):
     """索引操作异常"""
 
     def __init__(self, message: str, operation: str = "", context: Optional[Dict[str, Any]] = None):
@@ -205,7 +205,7 @@ class VectorDBError(IndexingError):
         )
 
 
-class RetrievalError(CoreLinuxCommitError):
+class RetrievalError(KernelCrashPatchError):
     """检索过程异常"""
 
     def __init__(self, message: str, stage: str = "", context: Optional[Dict[str, Any]] = None):
@@ -219,7 +219,7 @@ class RetrievalError(CoreLinuxCommitError):
 # LLM 相关异常
 # ============================================================================
 
-class LLMError(CoreLinuxCommitError):
+class LLMError(KernelCrashPatchError):
     """LLM 调用异常"""
 
     def __init__(self, message: str, model: str = "", context: Optional[Dict[str, Any]] = None):
@@ -254,7 +254,7 @@ class LLMResponseError(LLMError):
 # 外部依赖异常
 # ============================================================================
 
-class DependencyError(CoreLinuxCommitError):
+class DependencyError(KernelCrashPatchError):
     """外部依赖异常"""
 
     def __init__(self, message: str, dependency: str = "", context: Optional[Dict[str, Any]] = None):
@@ -299,7 +299,7 @@ class ModelNotAvailableError(DependencyError):
 
 __all__ = [
     # 基类
-    "CoreLinuxCommitError",
+    "KernelCrashPatchError",
     # 配置
     "ConfigurationError",
     "MissingConfigError",

@@ -1,5 +1,5 @@
 app:
-  name: "core-linuxcommit"
+  name: "kernel-crash-patch"
   version: "1.0.0"
 
 database:

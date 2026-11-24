@@ -38,7 +38,7 @@ class LogLevel:
 
 _default_config = {
     "log_dir": "logs",
-    "app_name": "CoreLinuxCommit",
+    "app_name": "KernelCrashPatch",
     "console_level": "INFO",
     "file_level": "DEBUG",
     "rotation": "10 MB",
@@ -50,7 +50,7 @@ _default_config = {
 
 def setup_logging(
     log_dir: str = "logs",
-    app_name: str = "CoreLinuxCommit",
+    app_name: str = "KernelCrashPatch",
     console_level: str = "INFO",
     file_level: str = "DEBUG",
     rotation: str = "10 MB",
@@ -185,7 +185,7 @@ def _setup_fallback_logging(level: str = "INFO") -> Any:
         stream=sys.stderr,
     )
 
-    return std_logging.getLogger("CoreLinuxCommit")
+    return std_logging.getLogger("KernelCrashPatch")
 
 
 # ============================================================================

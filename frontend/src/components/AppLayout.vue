@@ -5,7 +5,7 @@
       <div class="sidebar-header">
         <router-link to="/" class="logo-link">
           <span class="logo-icon">🐧</span>
-          <span v-show="!sidebarCollapsed" class="logo-text">Linux内核补丁匹配系统</span>
+          <span v-show="!sidebarCollapsed" class="logo-text">Linux 内核宕机自动诊断与补丁匹配系统</span>
         </router-link>
       </div>
 

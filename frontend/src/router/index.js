@@ -65,8 +65,8 @@ const router = createRouter({
 
 // ── 全局前置守卫 — 设置页面标题 ──────────────────
 router.beforeEach((to, from, next) => {
-  const title = to.meta.title || 'Linux内核补丁匹配系统'
-  document.title = `${title} — Linux内核补丁匹配系统`
+  const title = to.meta.title || 'Linux 内核宕机自动诊断与补丁匹配系统'
+  document.title = `${title} — Linux 内核宕机自动诊断与补丁匹配系统`
   next()
 })
 

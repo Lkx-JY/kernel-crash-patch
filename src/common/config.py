@@ -204,7 +204,7 @@ def get_config() -> Dict[str, Any]:
             "host": server_host,
             "port": server_port,
         },
-        "app": yaml_config.get("app", {"name": "core-linuxcommit", "version": "1.0.0"}),
+        "app": yaml_config.get("app", {"name": "kernel-crash-patch", "version": "1.0.0"}),
     }
 
 

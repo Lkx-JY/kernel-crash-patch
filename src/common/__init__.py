@@ -9,7 +9,7 @@
 """
 
 from .exceptions import (
-    CoreLinuxCommitError,
+    KernelCrashPatchError,
     ConfigurationError,
     MissingConfigError,
     InvalidConfigError,
@@ -74,7 +74,7 @@ from .utils import (
 
 __all__ = [
     # 异常
-    "CoreLinuxCommitError",
+    "KernelCrashPatchError",
     "ConfigurationError",
     "MissingConfigError",
     "InvalidConfigError",
